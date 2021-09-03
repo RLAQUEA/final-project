@@ -5,16 +5,34 @@
     margin-top: 5px;
     padding: 5% !important;
     display: flex;
-    justify-content: space-evenly !important;
+    justify-content: space-between !important;
     align-items: end;
     flex-direction: row;
     bottom: 0%;
 }
 
 .tuning-fork {
-   margin-top: 5rem;
+   width: calc(25% - 1rem);
    border: 2px white solid;
-   padding: 3%;
+   padding: 1rem;
+   margin-right: 1rem;
+}
+
+.create-container .sprite-container {
+    margin-top: 0;
+    padding: 0;
+    width: calc(25% - 1rem);
+    display: block;
+    margin-right: 1rem;
+}
+
+.create-container .chord-machine {
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.create-container .chord-machine button {
+    margin-right: .5rem;
 }
 
 .sprite {
@@ -23,10 +41,10 @@
 }
 
 .bowl {
-    margin-right: 20%;
-    margin-left: 5%;
+    width: calc(50% - 1rem);
     border: 2px white solid;
-    padding: 3%;
+    padding: 1rem;
+    margin-right: 1rem;
 }
 
 #create-desc{
@@ -43,4 +61,3 @@ button {
     margin: 0 auto;
 
 }
-
