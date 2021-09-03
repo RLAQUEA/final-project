@@ -25,7 +25,7 @@ import "./index.css"
     
   })
   return (
-    <container class="container">
+    <container class="sprite-container">
       <div class="chord-machine">
     <h4 id="header">Chord Machine</h4>
       <button
