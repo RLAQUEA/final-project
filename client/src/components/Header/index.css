@@ -83,7 +83,7 @@
     }
 
     .nav-links {
-        font-size: 1rem !important;
-        
+        font-size: .9rem !important;
+        margin-bottom: 20px !important;
     }
   }

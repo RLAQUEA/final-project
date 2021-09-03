@@ -1,7 +1,8 @@
 .homepage-container {
     margin-top: 50px;
     margin-bottom:15%;
-
+    overflow:auto;
+    padding-bottom:150px;
 }
 
 .main-img-container {
@@ -49,12 +50,6 @@ img {
     width: 100%;
 }
 
-
-
-
-
-
-
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
     img {
@@ -71,8 +66,8 @@ img {
 
     .favorite-button {
         position: absolute;
-        bottom: 15px;
-        right: 10px;
+        bottom: 0px;
+        right: 355px;
     }
 
     .sidebar {
@@ -115,14 +110,14 @@ img {
     .audio-player {
         position: absolute;
         bottom: 100px;
-        left: 110px;
+        left: 150px;
         color: #ffffff;
     }
 
     .favorite-button {
         position: absolute;
-        bottom: 15px;
-        right: 110px;
+        bottom: 0px;
+        right: 450px;
     }
 
     .sidebar {
@@ -146,8 +141,8 @@ img {
 
     .favorite-button {
         position: absolute;
-        bottom: 15px;
-        right: 110px;
+        bottom: 0px;
+        right: 400px;
     }
 
     .sidebar {
@@ -171,8 +166,8 @@ img {
 
     .favorite-button {
         position: absolute;
-        bottom: 15px;
-        right: 180px;
+        bottom: 0px;
+        right: 335px;
     }
 
     .sidebar {

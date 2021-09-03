@@ -12,6 +12,7 @@ import {
   } from "reactstrap";
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
+import "./Signup.css"
 
 import Auth from '../utils/auth';
 
@@ -54,8 +55,7 @@ const Signup = () => {
         <h4 className="p-2">Sign Up</h4>
         {data ? (
           <p>
-            Success! You may now head{" "}
-            <Link to="/">back to the homepage.</Link>
+            Success! You may will now be redirect to the home page
           </p>
         ) : (
           <Form onSubmit={handleFormSubmit}>

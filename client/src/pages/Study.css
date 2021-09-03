@@ -1,0 +1,30 @@
+.study-container {
+    overflow:auto;
+    padding-bottom:150px;
+    position: relative;
+}
+
+h1 {
+    font-family: "pacifico";
+    text-align: center;
+}
+
+
+.add-button {
+    position: absolute;
+    bottom: 12px;
+    left: 310px;
+}
+
+.sounds-wrapper {
+    width: 100%;
+    max-width: 1130px;
+    margin: 0 2rem;
+}
+
+.square {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -4,6 +4,7 @@ import { Redirect, useParams } from "react-router-dom";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { Container, Row, Col } from "reactstrap";
 import "./Favorites.css";
+import swal from 'sweetalert';
 
 import { useMutation } from "@apollo/client";
 import { DELETE_USER_SOUND } from "../utils/mutations";
@@ -29,6 +30,7 @@ function Favorite() {
       const { data } = await deleteUserSound({
         variables: { soundData: id },
       });
+      swal("Sound Deleted!", "Add some more sounds!", "warning");
       console.log(data);
       // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {
@@ -55,35 +57,38 @@ function Favorite() {
   }
 
   return (
-    <Container className="mt-5 mb-5">
-      <Row>
-        <div>
-          <h1 className="mb-5">Favorites</h1>
-
-          {savedSounds.map((sound, index) => {
-            return (
-              <Col className="d-flex justify-content-center">
-                <div className="sound-card">
-                  <figure key={sound._id}>
-                    <figcaption>Listen {sound.name}:</figcaption>
-                    <audio controls src={sound.link}>
-                      Your browser does not support the
-                      <code>audio</code> element.
-                    </audio>
-                    <Button
-                      onClick={() => handleClick(sound._id)}
-                      className="delete-button"
-                    >
-                      -
-                    </Button>
-                  </figure>
-                </div>
-              </Col>
-            );
-          })}
-        </div>
-      </Row>
-    </Container>
+    <div>
+      <h1 className="mt-5">Favorites</h1>
+      <Container className="favorites-container">
+        <Row>
+          <Col className="d-flex justify-content-center sounds-wrapper">
+            <div className="square">
+              {savedSounds.map((sound, index) => {
+                return (
+                  <Col className="d-flex justify-content-center">
+                    <div className="sound-card">
+                      <figure key={sound._id}>
+                        <figcaption>Listen {sound.name}:</figcaption>
+                        <audio controls src={sound.link}>
+                          Your browser does not support the
+                          <code>audio</code> element.
+                        </audio>
+                        <Button
+                          onClick={() => handleClick(sound._id)}
+                          className="delete-button"
+                        >
+                          -
+                        </Button>
+                      </figure>
+                    </div>
+                  </Col>
+                );
+              })}
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 

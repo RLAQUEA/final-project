@@ -2,7 +2,9 @@ import React from "react";
 import { QUERY_SOUNDS } from "../utils/queries";
 import { ADD_USER_SOUND } from "../utils/mutations";
 import { useQuery, useMutation } from "@apollo/client";
-import { Button } from "reactstrap";
+import { Container, Row, Col, Button } from "reactstrap";
+import "./Calm.css"
+import swal from 'sweetalert';
 
 const Calm = () => {
   const { data } = useQuery(QUERY_SOUNDS, {
@@ -18,6 +20,7 @@ const Calm = () => {
       const { data } = await addUserSound({
         variables: { soundData: id },
       });
+      swal("Sound Added!", "Go to your favorites page!", "success");
       console.log(data);
     } catch (err) {
       console.error(err);
@@ -25,30 +28,36 @@ const Calm = () => {
   };
 
   return (
-   
-
     <div>
-        <h1>Calm</h1>
-      {soundList
-        .filter((sound) => sound.tags.includes('calm'))
-        .map((filteredSounds) => {
-            console.log(filteredSounds)
-          return (
-            <figure key={filteredSounds._id}>
-              <figcaption>{filteredSounds.name}:</figcaption>
-              <audio controls src={filteredSounds.link}>
-                Your browser does not support the
-                <code>audio</code> element.
-              </audio>
-              <Button
-                onClick={() => handleClick(filteredSounds._id)}
-                className="add-button"
-              >
-                +
-              </Button>
-            </figure>
-          );
-        })}
+    <h1 className="mt-5">Calm</h1>
+    <Container className="calm-container">
+      <Row>
+        <Col className="d-flex justify-content-center sounds-wrapper">
+        <div className="square">
+          {soundList
+            .filter((sound) => sound.tags.includes("calm"))
+            .map((filteredSounds) => {
+              console.log(filteredSounds);
+              return (
+                <figure key={filteredSounds._id} className="sound-tile">
+                  <figcaption>{filteredSounds.name}:</figcaption>
+                  <audio controls src={filteredSounds.link}>
+                    Your browser does not support the
+                    <code>audio</code> element.
+                  </audio>
+                  <Button
+                    onClick={() => handleClick(filteredSounds._id)}
+                    className="add-button"
+                  >
+                    +
+                  </Button>
+                </figure>
+              );
+            })}
+            </div>
+        </Col>
+      </Row>
+    </Container>
     </div>
   );
 };

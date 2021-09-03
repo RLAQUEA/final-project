@@ -33,7 +33,6 @@ const Header = (props) => {
             <NavItem className="nav-items">
               <Link to="/" className="nav-links">Home</Link>
               <Link to="/explore" className="nav-links">Explore</Link>
-              <Link to="/dailyexercises" className="nav-links">Daily Exercises</Link>
               <Link to="/create" className="nav-links">Create</Link>
               <Link to="/favorites" className="nav-links">Favorites</Link>
             </NavItem>

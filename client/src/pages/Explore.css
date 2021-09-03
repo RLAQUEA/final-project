@@ -1,3 +1,8 @@
+.explore-container {
+    overflow:auto;
+    padding-bottom:150px;
+}
+
 button.add-button {
     display: inline-block;
     border-radius: 360px !important;
@@ -13,10 +18,14 @@ h6, h4, figcaption {
     color: #ffffff;
 }
 
+.container {
+    flex-wrap: wrap;
+}
+
 .col.header {
-    max-width: 500px;
     margin: 0 auto 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .sounds-wrapper {
