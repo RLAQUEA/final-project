@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -12,6 +11,7 @@ import {
 } from "reactstrap";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
+import "./Login.css"
 
 import Auth from "../utils/auth";
 
@@ -57,8 +57,7 @@ const Login = (props) => {
           <h4 className="p-2">Login</h4>
           {data ? (
             <p>
-              Success! You may now head{" "}
-              <Link to="/">back to the homepage.</Link>
+              Success! You may will now be redirect to the home page
             </p>
           ) : (
             <Form onSubmit={handleFormSubmit}>

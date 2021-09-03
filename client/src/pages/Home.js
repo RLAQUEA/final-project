@@ -5,6 +5,7 @@ import { Container, Row, Col, Button } from "reactstrap";
 import { ADD_USER_SOUND } from "../utils/mutations";
 import MusicButton from "../components/Button";
 import SoundWaves from "../assets/sound-waves.jpg";
+import swal from 'sweetalert';
 
 
 import "./Home.css";
@@ -38,12 +39,15 @@ function Home() {
       const { data } = await addUserSound({
         variables: { soundData: id },
       });
+      swal("Sound Added!", "Go to your favorites page!", "success");
       console.log(data);
       // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {
       console.error(err);
     }
   };
+
+
 
   return (
     <Container className="homepage-container">
@@ -56,10 +60,7 @@ function Home() {
                 <img src={SoundWaves} alt="soundwaves" />
                 <div className="audio-player">
                   <figure>
-
-
                     <figcaption>{randomName}</figcaption>
-
                     <audio
                       controls
                       src={randomLink}
@@ -73,7 +74,6 @@ function Home() {
                   <p className="tag">Tags: {randomTags}</p>
                 </div>
                 <div className="favorite-button">
-
                 <Button onClick={() => handleClick(randomId)} className="add-button">+</Button>
                 </div>
               </div>

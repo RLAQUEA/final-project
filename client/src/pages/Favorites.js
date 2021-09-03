@@ -4,6 +4,7 @@ import { Redirect, useParams } from "react-router-dom";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import { Container, Row, Col } from "reactstrap";
 import "./Favorites.css";
+import swal from 'sweetalert';
 
 import { useMutation } from "@apollo/client";
 import { DELETE_USER_SOUND } from "../utils/mutations";
@@ -29,6 +30,7 @@ function Favorite() {
       const { data } = await deleteUserSound({
         variables: { soundData: id },
       });
+      swal("Sound Deleted!", "Add some more sounds!", "warning");
       console.log(data);
       // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {

@@ -6,6 +6,7 @@ import { useQuery, useMutation } from "@apollo/client";
 import { useHistory } from "react-router-dom";
 import { Container, Row, Col, Button } from "reactstrap";
 import "./Explore.css"
+import swal from 'sweetalert';
 
 const Explore = () => {
   const history = useHistory();
@@ -26,7 +27,7 @@ const Explore = () => {
         variables: { soundData: id },
       });
       console.log(data);
-      alert("Sound added to Favorites page!")
+      swal("Sound Added!", "Go to your favorites page!", "success");
       // history.push(`/favorites/${data.addUserSound._id}`);
     } catch (err) {
       console.error(err);

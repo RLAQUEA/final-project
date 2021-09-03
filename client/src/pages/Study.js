@@ -4,6 +4,7 @@ import { ADD_USER_SOUND } from "../utils/mutations";
 import { useQuery, useMutation } from "@apollo/client";
 import { Container, Row, Col, Button } from "reactstrap";
 import "./Study.css"
+import swal from 'sweetalert';
 
 const Study = () => {
   const { data } = useQuery(QUERY_SOUNDS, {
@@ -19,6 +20,7 @@ const Study = () => {
       const { data } = await addUserSound({
         variables: { soundData: id },
       });
+      swal("Sound Added!", "Go to your favorites page!", "success");
       console.log(data);
     } catch (err) {
       console.error(err);
