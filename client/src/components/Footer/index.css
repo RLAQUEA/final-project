@@ -9,12 +9,10 @@
 
 #footer-id {
     background-color: var(--grayblue);
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     max-height: 10%;
 }
-
-
 
 .links {
     display: flex;
