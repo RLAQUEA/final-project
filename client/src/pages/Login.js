@@ -53,14 +53,14 @@ const Login = (props) => {
   return (
     <Container>
       <Row>
-        <Col md={{ size: 6, offset: 3 }} className="mt-5 mb-5">
-          <h4 className="p-2">Login</h4>
+        <Col md={{ size: 6 , offset: 3 }} className="mt-5 mb-5">
+          <h4 className="p-2 login">Login</h4>
           {data ? (
             <p>
               Success! You may will now be redirect to the home page
             </p>
           ) : (
-            <Form onSubmit={handleFormSubmit}>
+            <Form className="email" onSubmit={handleFormSubmit}>
               <FormGroup className="mt-2">
                 <Label for="exampleEmail">Email</Label>
                 <Input
@@ -71,6 +71,7 @@ const Login = (props) => {
                   value={formState.email}
                   onChange={handleChange}
                 />
+                
               </FormGroup>
               <FormGroup className="mt-2">
                 <Label for="examplePassword">Password</Label>
@@ -91,7 +92,14 @@ const Login = (props) => {
                 Login
               </Button>
               <div className="mt-1">
-              <a href="/signup">Signup</a>
+          <Button
+              className="mt-3"
+                style={{ cursor: "pointer" }}
+                type="submit"
+                >
+                Signup
+                </Button>
+                
               </div>
             </Form>
           )}
