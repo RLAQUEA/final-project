@@ -7,13 +7,14 @@
 }
 
 .nav-bar {
+    
     background-color: #455359;
 }
 
 .nav-brand {
     color: var(--tan) !important;
     font-size: 1.75rem !important;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-brand:hover {
@@ -21,6 +22,7 @@
 }
 
 .nav-link-group {
+    
     display: flex;
     justify-content: flex-end;
 }
@@ -30,7 +32,7 @@
     text-decoration: none !important;
     color: var(--tan);
     font-size: 1.5rem !important;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-links:hover {
@@ -47,7 +49,7 @@
     text-decoration: none !important;
     color: #ffffff;
     font-size: 1.1rem !important;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logout-link {
@@ -57,7 +59,7 @@
     text-decoration: none !important;
     color: #ffffff;
     font-size: 1.1rem !important;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .login-link:hover, .logout-link:hover {
