@@ -81,7 +81,9 @@ function Home() {
           </Row>
         </Col>
         <Col lg="3" md="12" className="sidebar">
+          <div className="explore">
           <h4>Explore by Intention:</h4>
+          </div>
           <Row>
             <Col md="12">
               <Row className="music-button-row">
@@ -107,6 +109,7 @@ function Home() {
           </Row>
         </Col>
       </Row>
+      
     </Container>
   );
 }
