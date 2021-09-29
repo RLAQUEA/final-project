@@ -4,21 +4,22 @@
     --tan: #A6A085;
     --peach: #BF7D65;
     --coral: #F25E5E;
+    --white: #fff;
 }
 
 .nav-bar {
     
-    background-color: #455359;
+    background-color: #8FADBF;
 }
 
 .nav-brand {
-    color: var(--tan) !important;
-    font-size: 1.75rem !important;
+    color: var(--darkblue) !important;
+    font-size: 2rem !important;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 .nav-brand:hover {
-    color: var(--darkblue) !important;
+    color: var(--white) !important;
 }
 
 .nav-link-group {
@@ -30,7 +31,7 @@
 .nav-links {
     margin-right: 20px;
     text-decoration: none !important;
-    color: var(--tan);
+    color: var(--darkblue);
     font-size: 1.5rem !important;
     font-family: 'Source Sans Pro', sans-serif;
 }

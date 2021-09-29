@@ -49,6 +49,7 @@ const Signup = () => {
   };
 
   return (
+    <div className="signup-container">
     <Container>
     <Row>
       <Col md={{ size: 6, offset: 3 }} className="mt-5 mb-5">
@@ -89,8 +90,17 @@ const Signup = () => {
               Sign Up
             </Button>
             <div className="mt-1">
-            <a href="/login">Login</a>
+            <Button
+                className="mt-3"
+                style={{ cursor: "pointer" }}
+              >
+             <a className="login" href="/login">Login</a>
+              </Button>
+            
             </div>
+
+
+
           </Form>
         )}
 
@@ -100,6 +110,7 @@ const Signup = () => {
       </Col>
     </Row>
   </Container>
+  </div>
   );
 };
 

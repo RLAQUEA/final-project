@@ -52,6 +52,7 @@ const Login = (props) => {
 
   return (
     <Container>
+      <div className="login-container">
       <Row>
         <Col md={{ size: 6 , offset: 3 }} className="mt-5 mb-5">
           <h4 className="p-2 login">Login</h4>
@@ -85,22 +86,22 @@ const Login = (props) => {
                 />
               </FormGroup>
               <Button
-                className="mt-3"
+                className="mt-3 login"
                 style={{ cursor: "pointer" }}
-                type="submit"
               >
                 Login
               </Button>
-              <div className="mt-1">
-          <Button
+          <div>
+            <Button
               className="mt-3"
                 style={{ cursor: "pointer" }}
                 type="submit"
                 >
-                Signup
-                </Button>
-                
-              </div>
+                <a className="signup" href="/signup">
+                Sign Up
+                </a>
+                </Button> 
+          </div>
             </Form>
           )}
 
@@ -109,6 +110,7 @@ const Login = (props) => {
           )}
         </Col>
       </Row>
+      </div>
     </Container>
   );
 };

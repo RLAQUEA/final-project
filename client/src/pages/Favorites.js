@@ -49,10 +49,12 @@ function Favorite() {
 
   if (!user?.email) {
     return (
+      <div className="fav-container">
       <h4 className="mt-5 mb-5 text-center">
         You need to be logged in to see this. Use the navigation links above to
         sign up or log in!
       </h4>
+      </div>
     );
   }
 

@@ -29,7 +29,7 @@ import useSound from 'use-sound';
         <p></p>
       <button onClick={handleClick.bind()}>
         <span id="../assets/sounds/singingbowl.mp3" role="img" aria-label="Heart">
-        <p>TUNING FORK</p>
+        <img className="fork-pic" src="../assets/sounds/img/tuningforkpic.jpg" alt="tuning-fork"></img> 
         </span>
       </button>
     </div>
@@ -38,3 +38,6 @@ import useSound from 'use-sound';
   }
 
   export default TuningFork;
+
+
+  

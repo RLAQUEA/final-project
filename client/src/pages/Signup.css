@@ -1,3 +1,18 @@
+.signup-container {
+    margin-bottom: 26rem;
+}
+
 p {
     color: #ffffff;
 }
+
+.signup {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.signup:hover {
+    color: white;
+}
+
